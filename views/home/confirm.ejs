@@ -1,0 +1,32 @@
+<section class="home_container">
+  <div class="card w-50 h-50 bg-light shadow-lg p-3 mb-5 bg-body rounded-3">
+    <div class="card-body">
+      <h1 class="card-title text-center text-dark">
+        Vali<Strong style="color: #ff0202;">mail</Strong>er
+      </h1>
+      <form action="/confirm-code" method="POST">
+        <h5 for="code" class="mt-2">Code:</h5>
+        <div class="input-group d-flex justify-content-center">
+          <input type="number" name="c1" id="c1" class="code" min="0" max="9" maxlength="1">
+          <input type="number" name="c2" id="c2" class="code" min="0" max="9" maxlength="1">
+          <input type="number" name="c3" id="c3" class="code" min="0" max="9" maxlength="1">
+          <input type="number" name="c4" id="c4" class="code" min="0" max="9" maxlength="1">
+        </div>
+        <button type="submit" class="btn btn-primary form-control mt-4">Confirm</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const codes = document.getElementsByClassName('code');
+  for (let i = 0; i < codes.length; i++) {
+    codes[i].addEventListener('input', (event) => {
+      let value = event.data;
+
+      if (!value || value == undefined || value == null) codes[i].value = '0';
+
+      if (codes[i].value.length > 1) codes[i].value = value;
+    });
+  }
+</script>

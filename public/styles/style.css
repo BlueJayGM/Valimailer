@@ -1,0 +1,52 @@
+.home_container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fefeff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 90% !important;
+  height: 380px !important;
+  max-width: 500px !important;
+}
+
+.code {
+  font-size: 2.5rem;
+  width: 3rem !important;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+}
+
+@media screen and (max-width: 380px) {
+  
+  .code {
+    width: 2rem !important;
+    font-size: 2rem !important;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+  
+  .code {
+    width: 1.5rem !important;
+    font-size: 1.6rem !important;
+  }
+
+}
