@@ -110,5 +110,5 @@ app.post('/confirm-code', (req, res) => {
 
 });
 
-const port = 4040;
+const port = process.env.PORT || 4040;
 app.listen(port, () => console.log('Listening on http://localhost:4040/'));
